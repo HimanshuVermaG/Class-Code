@@ -25,7 +25,7 @@ int main()
         printf("\n3. Exit");
         printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~n");
         printf("\nEnter your choice\n");
-        scanf("%d",ch);
+        scanf("%d",&ch);
         switch (ch)
         {
         case 1:

@@ -25,7 +25,7 @@ int main()
         printf("\n3. Exit");
         printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~n");
         printf("\nEnter your choice\n");
-        scanf("%d",ch);
+        scanf("%d",&ch);
         switch (ch)
         {
         case 1:
@@ -54,14 +54,14 @@ void creatlist()
     char ch1;
     ptr = (struct node *)malloc(sizeof(struct node));
     printf("\nEnter Info Part of the Node\n");
-    scanf("%d",ptr->info);
+    scanf("%d",&ptr->info);
     start=ptr;
     ch1=getchar();
     while(ch1=='Y'||ch1=='y')
     {
         cpt = (struct node *)malloc(sizeof(struct node));
         printf("\nEnter Info part of the Node\n");
-        scanf("%d",cpt->info);
+        scanf("%d",&cpt->info);
         ptr->next=cpt;
         ptr=cpt;
         ch1=getchar();
