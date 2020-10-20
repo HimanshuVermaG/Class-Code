@@ -1,10 +1,10 @@
-// WAP to implement Circular Queue using Link list
+// WAP to implement Queue using Array
 
 #include<stdio.h>
 #include<stdlib.h>
 #define max 10
 
-int cqueue [max],front=0,rear=0;
+int queue [max],front=0,rear=0;
 void insertion();
 void deletion();
 void display();
@@ -15,10 +15,10 @@ void main()
     while (1)
     {
         printf("\n------------------------------\n");
-        printf("\nOperation on Cqueue\n");
+        printf("\nOperation on Queue\n");
         printf("\n------------------------------\n");
-        printf("\n1. Insert into Cqueue");
-        printf("\n2. Delete from Cqueue");
+        printf("\n1. Insert into Queue");
+        printf("\n2. Delete from Queue");
         printf("\n3. Display");
         printf("\n4. Exit");
         printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
@@ -52,16 +52,16 @@ void main()
 void insertion()
 {
     int data;
-    if((rear+1)%max==front)
+    if(rear==max)
     {
-        printf("Cqueue Overflow");
+        printf("Queue Overflow");
     }
     else
     {
         printf("Enter the Data = ");
         scanf("%d",&data);
-        cqueue[rear]=data;
-        rear=(rear+1)%max;
+        queue[rear]=data;
+        rear=rear+1;
 
     }
 }
@@ -71,22 +71,22 @@ void deletion()
     int data;
     if(front==rear)
     {
-        printf("Cqueue Underflow");
+        printf("Queue Underflow");
     }
     else
     {
-        data=cqueue[front];
-        front=(front+1)%max;
+        data=queue[front];
+        front=front+1;
     }
     
 }
 void display()
 {
-    int i=front;
-    while (i!=rear-1)
+    int i;
+    for (int i = 0; i <=rear; i++)
     {
-        printf("\n%d",cqueue[i]);
-        i=(i+1)%max;
+        printf("\n%d",queue[i]);
     }
+    
     
 }
