@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "pRG30.C": "cpp",
+        "cmath": "c",
+        "*.tcc": "c"
+    }
+}
